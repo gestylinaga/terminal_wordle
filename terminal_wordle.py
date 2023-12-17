@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Terminal Wordle
 
 word = "python" # temporary word
