@@ -60,7 +60,7 @@ def main():
 
         display_results(guesses)
 
-        if guesses == 0:
+        if (guesses == 0) and (guess.lower() != WORD.lower()):
             print("No more guesses left...")
             print(f"The word was {WORD}!")
             print("\033[91mYOU LOSE!")
