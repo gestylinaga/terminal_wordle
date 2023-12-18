@@ -39,9 +39,8 @@ def check_word(guess):
 def display_results(guesses):
     print(f"Guesses left: {guesses}")
     print("Past guesses:")
-    if GUESSED != []:
-        for i in GUESSED:
-            print(i)
+    for i in GUESSED:
+        print(i)
     print("\033[0m") # resets text formatting/styling
 
 def main():

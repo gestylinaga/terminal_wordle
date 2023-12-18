@@ -1006,7 +1006,6 @@ wordlist = [
 
 def word_choice():
     word_choice = wordlist[randint(0, len(wordlist))]
-    #print(word_choice)
     return word_choice
 
 
