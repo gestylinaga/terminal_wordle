@@ -64,11 +64,13 @@ def main():
             print("No more guesses left...")
             print(f"The word was {WORD}!")
             print("\033[91mYOU LOSE!")
+            print("\033[0m") # resets text formatting/styling
             won = True
 
         if guess.lower() == WORD.lower():
             print(f"Correct! The word was {WORD}!")
             print("\033[92mYOU WIN!")
+            print("\033[0m") # resets text formatting/styling
             won = True
 
 
