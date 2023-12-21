@@ -42,12 +42,12 @@ def check_word(guess):
 
     while i < len(split_guess):
         # Correct letter & correct position
-        if split_guess[i] == split_word[i]:
+        if split_guess[i].lower() == split_word[i].lower():
             temp_l = f"\033[92m{split_guess[i].upper()} " # green
             temp_guess.append(temp_l)
             i += 1
         # Just correct letter
-        elif split_guess[i] in split_word:
+        elif split_guess[i].lower() in split_word:
             temp_l = f"\033[93m{split_guess[i].upper()} " # yellow
             temp_guess.append(temp_l)
             i += 1
