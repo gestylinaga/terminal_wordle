@@ -24,8 +24,8 @@ def check_word(guess):
     split_word = list(WORD)
     split_guess = list(guess)
     temp_guess = [] 
+    temp_l = ""
     i = 0
-    temp_i = f""
 
     # OLD FOR LOOP STRUCTURE:
     #for i in split_guess:
@@ -43,18 +43,18 @@ def check_word(guess):
     while i < len(split_guess):
         # Correct letter & correct position
         if split_guess[i] == split_word[i]:
-            temp_i = f"\033[92m{split_guess[i].upper()} " # green
-            temp_guess.append(temp_i)
+            temp_l = f"\033[92m{split_guess[i].upper()} " # green
+            temp_guess.append(temp_l)
             i += 1
         # Just correct letter
         elif split_guess[i] in split_word:
-            temp_i = f"\033[93m{split_guess[i].upper()} " # yellow
-            temp_guess.append(temp_i)
+            temp_l = f"\033[93m{split_guess[i].upper()} " # yellow
+            temp_guess.append(temp_l)
             i += 1
         # No match
         else:
-            temp_i = f"\033[0m{split_guess[i].upper()} " # white
-            temp_guess.append(temp_i)
+            temp_l = f"\033[0m{split_guess[i].upper()} " # white
+            temp_guess.append(temp_l)
             i += 1
 
     # joins 'temp_guess' list into a string & appends it to 'guessed' list
@@ -73,10 +73,10 @@ def main():
     print("\033[93mLetters in Yellow are correct, BUT in the wrong place")
     print("\033[92mLetters in Green are correct, AND in the correct place")
     print("\033[0m") # resets text formatting/styling
-    won = False
+    run = True
     guesses = 6
 
-    while not won:
+    while run:
         guess = input("Your Guess?\n")
 
         # Validates 'guess' before continuing
@@ -91,14 +91,14 @@ def main():
             print(f"The word was {WORD}!")
             print("\033[91mYOU LOSE!")
             print("\033[0m") # resets text formatting/styling
-            won = True
+            run = False
 
         # Win Condition Check
         if guess.lower() == WORD.lower():
             print(f"Correct! The word was {WORD}!")
             print("\033[92mYOU WIN!")
             print("\033[0m") # resets text formatting/styling
-            won = True
+            run = False
 
 
 if __name__ == "__main__":
