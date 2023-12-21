@@ -1,4 +1,4 @@
-from random import randint
+from random import choice
 
 # Wordlist from: https://www.thefreedictionary.com/5-letter-words.htm
 wordlist = [
@@ -1005,7 +1005,7 @@ wordlist = [
 ]
 
 def word_choice():
-    word_choice = wordlist[randint(0, len(wordlist))]
+    word_choice = choice(wordlist)
     return word_choice
 
 
