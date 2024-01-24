@@ -1,11 +1,20 @@
-# Terminal Wordle
+# 🐍 Terminal Wordle
 
-Wordle in the Terminal
+Wordle in the Terminal!
 
-Written in Python 🐍
+Written entirely in Python 🐍
 
----
+Check out my rewrite in Go [here](https://github.com/gestylinaga/goWordle).
 
-TODO:
-  - add filter for non-words
-  - fix: duplicate letters in 'guess' only yellow if duplicates in 'word' exist
+## 📦 Requirements
+- Python >= 3.x.x
+
+## ✨ Usage
+```bash
+./main.py
+```
+
+
+#### 🔧 TODO:
+- add filter for non-words
+- fix: duplicate letters in 'guess' only yellow if duplicates in 'word' exist
